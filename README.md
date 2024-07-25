@@ -14,7 +14,7 @@ You can read more about the Visual Task Adaptation Benchmark (VTAB) here https:/
 # Motivation
 I had project where I finetuned vit_b_16 with LoRa on VTAB-1k and I could not find simple implementation for this benchmark in PyTorch
 
-Some of the datasets were a bit of pain (Caltech101), so maybe this will save you some time in search of the data
+Some of the datasets were a bit of pain, so maybe this will save you some time in search of the data
 
 **There are probably some bugs**
 

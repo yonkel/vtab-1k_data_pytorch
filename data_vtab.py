@@ -69,7 +69,7 @@ def download_dataset(name, transform, download=True, seed=42):
         labels_count = 100
 
     elif name == 'caltech101':
-        data = torchvision.datasets.Caltech101(root='./data', download=False, transform=transform)
+        data = torchvision.datasets.Caltech101(root='./data', download=download, transform=transform)
         trainset, testset = random_split(data, [1000, len(data) - 1000], generator=generator)
         labels_count = 102
 
@@ -276,7 +276,7 @@ def test_dataset(name):
     else:
         transform = ViT_B_16_Weights.IMAGENET1K_V1.transforms()
 
-    trainset, testset, labels_count = download_dataset(name, transform, True)
+    trainset, testset, labels_count = download_dataset(name=name, transform=transform, download=True)
 
     print(trainset[0])
 
